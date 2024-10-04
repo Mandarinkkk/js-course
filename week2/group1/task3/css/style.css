@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif; /* Шрифт */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Градиентный фон */
+    margin: 0; /* Убирает отступы */
+    padding: 20px; /* Внутренние отступы */
+    color: #fff; /* Цвет текста */
+}
+
+.container {
+    max-width: 400px; /* Максимальная ширина */
+    margin: auto; /* Центрирование */
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень */
+    backdrop-filter: blur(10px); /* Размытие фона */
+}
+
+h1 {
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 24px; /* Размер шрифта */
+}
+
+label {
+    display: block; /* Блочный элемент */
+    margin-bottom: 5px; /* Отступ снизу */
+    font-weight: bold; /* Жирный текст */
+}
+
+input {
+    width: 100%; /* Ширина 100% */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 15px; /* Отступ снизу */
+    border: none; /* Убирает рамку */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+    color: #fff; /* Цвет текста */
+    transition: background-color 0.3s ease; /* Плавный переход */
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.4); /* Светлее при фокусе */
+    outline: none; /* Убирает контур */
+}
+
+button {
+    width: 100%; /* Ширина 100% */
+    padding: 10px; /* Внутренние отступы */
+    background-color: #ff6b6b; /* Фон кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убирает рамку */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные переходы */
+}
+
+button:hover {
+    background-color: #ff4c4c; /* Темнее при наведении */
+    transform: translateY(-2px); /* Поднимает кнопку */
+}
+
+button:active {
+    transform: translateY(0); /* Возвращает на место при нажатии */
+}
+
+p {
+    text-align: center; /* Центрирует текст параграфа */
+    font-weight: bold; /* Жирный текст */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+select {
+    width: 100%; /* Ширина 100% */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 15px; /* Отступ снизу */
+    border: none; /* Убирает рамку */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный фон */
+    color: #fff; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+   
+}
+
+select:focus {
+    background-color: rgba(255, 255, 255, 0.4); /* Светлее при фокусе */
+    outline: none; /* Убирает контур */
+}
+
+option {
+    background-color: #fff; /* Цвет фона для опций */
+    color: #000; /* Цвет текста для опций */
+}
+

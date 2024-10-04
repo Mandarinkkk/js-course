@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Игра в бадминтон</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Хотите ли вы играть в бадминтон?</h1>
+
+        <label for="temperature">Температура:</label>
+        <select id="temperature">
+            <option value="жарко">Жарко</option>
+            <option value="тепло">Тепло</option>
+            <option value="холодно">Холодно</option>
+        </select>
+
+        <label for="precipitation">Осадки:</label>
+        <select id="precipitation">
+            <option value="ясно">Ясно</option>
+            <option value="облачно">Облачно</option>
+            <option value="дождь">Дождь</option>
+            <option value="снег">Снег</option>
+            <option value="град">Град</option>
+        </select>
+
+        <label for="wind">Ветер:</label>
+        <select id="wind">
+            <option value="есть">Есть</option>
+            <option value="нет">Нет</option>
+        </select>
+
+        <label for="humidity">Влажность:</label>
+        <select id="humidity">
+            <option value="высокая">Высокая</option>
+            <option value="низкая">Низкая</option>
+        </select>
+
+       <button id="checkPlay">Проверить</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
