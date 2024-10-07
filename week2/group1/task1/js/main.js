@@ -1,8 +1,9 @@
 const age = (ageInput) => {
     if (isNaN(ageInput) || ageInput < 0) {
-    return "Пожалуйста, введите корректный возраст.";
+    alert("Пожалуйста, введите корректный возраст.");
+    return ;
     }
-    else {
+    
     let ageString;
     // оператор switch для определения правильного склонения
     switch (ageInput % 10) {
@@ -28,7 +29,7 @@ const age = (ageInput) => {
     }
 
     return ageInput, ageString;
-    }
+    
 };
 
 const main = () => {

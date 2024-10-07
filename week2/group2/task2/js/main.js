@@ -2,33 +2,43 @@ const findPrimes = (number) => {
     number = Number(number); // Преобразуем входное значение в число
 
     if (isNaN(number) || number <= 1) {
-        return "Пожалуйста, введите целое число больше 1.";
-    } else {
-        const primes = sieveOfEratosthenes(number); // Объявляем переменную с помощью const
+        alert("Пожалуйста, введите целое число больше 1.");
+        return;
+    } 
+    
+    let primes = ""; // Строка для хранения найденных простых чисел
 
-        return `Простые числа до ${number}: ${primes.join(', ')}`; // Используем шаблонные строки
-    }
-};
-
-function sieveOfEratosthenes(n) {
-    const isPrime = new Array(n + 1).fill(true);
-    isPrime[0] = isPrime[1] = false; // 0 и 1 не являются простыми числами
-
-    for (let i = 2; i * i <= n; i++) {
-        if (isPrime[i]) {
-            for (let j = i * i; j <= n; j += i) {
-                isPrime[j] = false; // Убираем составные числа
-            }
+    for (let i = 2; i <= number; i++) {
+        if (isPrime(i)) {
+            primes += i + ", "; // Добавляем простое число к строке
         }
     }
 
-    return isPrime.map((prime, index) => prime ? index : null).filter(Number.isInteger);
-}
+    // Удаляем последнюю запятую и пробел
+    if (primes.length > 0) {
+        primes = primes.slice(0, -2);
+    }
+
+    return primes;
+    
+};
+
+const isPrime = (num) => {
+    if (num < 2) return false;
+    for (let i = 2; i * i <= num; i++) {
+        if (num % i === 0) {
+            return false; // Число составное
+        }
+    }
+    return true; // Число простое
+};
 
 const main = () => {
     let result = document.getElementById("result");
     let number = document.getElementById("number").value;
-    result.innerHTML = findPrimes(number);
+    let prime = findPrimes(number);
+    result.innerText = "Простые числа до " + number + " : " + prime;
 };
 
 document.getElementById("findPrime").addEventListener("click", main);
+

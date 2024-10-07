@@ -1,9 +1,16 @@
 const isGoodWeather = (temperature, precipitation, wind, humidity) => {
+    if (!temperature || !precipitation || !wind || !humidity) {
+        alert("Ошибка: Все параметры должны быть указаны.");
+        return;
+    }
+    
     if (temperature === "тепло" && (precipitation === "ясно" || precipitation === "облачно") && wind === "нет" && humidity === "низкая") {
-        return 'Да';
+        ans = 'Да'
+        return ans;
     }
     else {
-        return "Нет";
+        ans = "Нет"
+        return ans;
     }
 };
 

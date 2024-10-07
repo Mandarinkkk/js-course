@@ -1,6 +1,5 @@
 const drawPyramid = (height) => {
     
-    
     if (isNaN(height) || height < 1) {
         alert("Пожалуйста, введите целое число больше 0.");
         return;
@@ -8,19 +7,27 @@ const drawPyramid = (height) => {
 
     const canvas = document.getElementById("pyramidCanvas");
     const ctx = canvas.getContext("2d");
+    let squareSize = 11;
+    let gap = 10;
+    let canvasWidth = canvas.width
     
     // Очистка канваса перед рисованием
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    const baseWidth = height * 20; // Ширина основания пирамиды
-    const startX = (canvas.width - baseWidth) / 2; // Начальная позиция по X
-
+    
     for (let i = 0; i < height; i++) {
-        const currentWidth = baseWidth - (i * 20); // Уменьшаем ширину на каждом уровне
-        const startY = canvas.height - ((i + 1) * 20); // Позиция по Y
+    let blocks = 2 * (i + 1);
+    let offset = (canvasWidth - (blocks * squareSize + (blocks - 1) * gap)) / 2;
 
-        ctx.fillStyle = `hsl(${(i / height) * 360}, 100%, 50%)`; // Цвет уровня
-        ctx.fillRect(startX + (i * 10), startY, currentWidth, 20); // Рисуем уровень пирамиды
+    for (let j = 0; j < blocks / 2; j++) {
+      let x = offset + j * (squareSize + gap) - gap;
+      let y = i * (squareSize + gap);
+      ctx.fillRect(x, y, squareSize, squareSize);
+      let xc = offset + (blocks / 2 + j) * (squareSize + gap);
+      let yc = i * (squareSize + gap);
+      ctx.fillStyle = "red";
+      ctx.fillRect(x, y, squareSize, squareSize);
+      ctx.fillRect(xc, yc, squareSize, squareSize);
+    }
     }
 };
 

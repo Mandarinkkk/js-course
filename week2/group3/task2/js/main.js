@@ -4,8 +4,8 @@ const calculateMedian = (input) => {
     numbers = input.split(',').map(num => parseFloat(num.trim())).filter(num => !isNaN(num));
 
     if (numbers.length === 0) {
-        "Пожалуйста, введите корректные числа.";
-        return "Пожалуйста, введите корректные числа.";
+        alert = ("Пожалуйста, введите корректные числа.");
+        return ;
     }
     else {
     // Сортируем массив
@@ -29,7 +29,8 @@ const calculateMedian = (input) => {
 const main = () => {
     let result = document.getElementById("result");
     let input = document.getElementById("numbers").value;
-    result.innerHTML = calculateMedian(input);
+    let mid = calculateMedian(input)
+    result.innerText = "Медиана " + mid;
 };
 
 document.getElementById("calculateMedian").addEventListener("click", main);

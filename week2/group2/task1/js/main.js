@@ -1,8 +1,9 @@
 const calculateSquareRoot = (number) => {
     if (isNaN(number) || number < 0) {
-        return "Пожалуйста, введите положительное число.";
+        alert("Пожалуйста, введите положительное число.");
+        return ;
     }
-    else {
+    
     let guess = number / 2; // Начальное приближение
     let epsilon = 0.00001; // Точность
     let iterationCount = 0;
@@ -12,14 +13,15 @@ const calculateSquareRoot = (number) => {
         iterationCount++;
     }
 
-    return `Квадратный корень из ${number} равен примерно ${guess.toFixed(5)} (итераций: ${iterationCount}).`;
-    }
+    return {guess: guess, iterationCount: iterationCount};
+
 };
 
 const main = () => {
     let result = document.getElementById("result");
     let number = document.getElementById("number").value;
-    result.innerHTML = calculateSquareRoot(number);
+    let root = calculateSquareRoot(number);
+    result.innerText = "Квадратный корень из " + number + " равен примерно " + root.guess.toFixed(5) + " итераций: " + root.iterationCount;
 };
 
 document.getElementById("calculate").addEventListener("click", main);
