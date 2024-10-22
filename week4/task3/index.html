@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Линии</title> 
+</head> 
+<body> 
+    <h1>Линии из одной точки</h1> 
+    <label for="lineCount">Введите количество линий:</label> 
+    <input type="number" id="lineCount" value="10"><br> 
+ 
+ 
+    <label for="side">Выберите сторону начальной точки:</label> 
+    <select id="side"> 
+        <option value="top">Верх</option> 
+        <option value="right">Право</option> 
+        <option value="bottom">Низ</option> 
+        <option value="left">Лево</option> 
+    </select><br> 
+ 
+    <button onclick="main()">Нарисовать</button> 
+    <br> 
+    <canvas id="canvas" width="600" height="400" style="border:1px solid black;"></canvas> 
+    <script src="./build/draw.js"></script>
+    <script src="./build/point.js"></script>
+    <script src="./build/param.js"></script>
+    <script src="./build/color.js"></script>
+    <script src="./build/index.js"></script>
+</body> 
+</html>
