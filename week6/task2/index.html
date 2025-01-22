@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заказы в феврале 2020</title>
+  
+</head>
+<body>
+  <h1>Вычисление общей суммы заказов за февраль 2020 года</h1>
+  
+  <form id="orderForm">
+    <label for="date">Дата заказа:</label>
+    <input type="date" id="date" name="date" required 
+           min="2020-02-01" max="2020-02-29" value="2020-02-01">
+    
+    <label for="amount">Сумма заказа:</label>
+    <input type="number" id="amount" name="amount" required>
+    
+    <button type="submit">Добавить заказ</button>
+  </form>
+
+  <button id="calculateBtn">Вычислить общую сумму за февраль 2020 года</button>
+
+  <h2>Результат:</h2>
+  <p id="result">Общая сумма: 0</p>
+  <script src="src/orders.ts"></script>
+</body>
+</html>
